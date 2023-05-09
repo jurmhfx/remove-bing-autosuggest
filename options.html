@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 6px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>
+            Disable auto suggestions in:
+        </h2>
+        <form id="options-form">
+            <label>
+                <input type="checkbox" id="bing-main-search" name="bing-main-search">
+                Bing Main Search
+            </label>
+            <label>
+                <input type="checkbox" id="bing-ai-chat" name="bing-ai-chat">
+                Bing AI Chat
+            </label>
+            <button type="submit">Save</button>
+            <p id="status" style="display: none; color: green;"></p>
+        </form>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>

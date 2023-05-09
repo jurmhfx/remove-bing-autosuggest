@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Remove Bing Autosuggest",
+    "version": "1.0.2",
+    "description": "Remove auto suggestions from Bing.",
+    "permissions": [
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+  },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.bing.com/*"
+        ],
+        "js": [
+          "remove-elements.js"
+        ],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "action": {
+        "default_popup": "options.html"
+      }
+  }
+  
